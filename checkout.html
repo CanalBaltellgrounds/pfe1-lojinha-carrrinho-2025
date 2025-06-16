@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Finalizar Compra</h1>
+    <button onclick="abrirCarrinho()" class="cart-btn">🛒</button>
+  </header>
+
+  <main>
+    <section id="resumo-compra">
+      <h2>Resumo da Compra</h2>
+      <div id="lista-checkout"></div>
+      <p>Total: <span id="total-checkout">R$ 0,00</span></p>
+    </section>
+
+    <form class="checkout-form" onsubmit="finalizarCompra(event)">
+      <h2>Dados para entrega</h2>
+      <input type="text" placeholder="CEP" required />
+      <input type="text" placeholder="Número" required />
+      <input type="text" placeholder="Complemento" />
+      <input type="text" placeholder="Endereço" required />
+      <input type="text" placeholder="Cidade" required />
+      <input type="text" placeholder="Estado" required />
+
+      <h2>Pagamento</h2>
+      <div class="pagamento">
+        <p>Pix</p>
+        <img src="https://via.placeholder.com/100" alt="QR Code Pix" />
+        <p>ou</p>
+        <input type="text" placeholder="Número do cartão" />
+        <input type="text" placeholder="Validade" />
+        <input type="text" placeholder="CVV" />
+      </div>
+
+      <button type="submit">Pagar</button>
+    </form>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html
